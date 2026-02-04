@@ -1,3 +1,11 @@
 @import "tailwindcss";
-@source "../index.html";
-@source "./**/*.{js,ts,jsx,tsx}";
+
+/* Esto le dice a Tailwind que busque clases en tus componentes de React */
+@source "./**/*.{js,jsx}";
+
+/* Opcional: Un poco de estilo global para que no se vea tan pegado */
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-gray-50;
+  }
+}

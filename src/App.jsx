@@ -4,7 +4,7 @@ import CharacterCard from './components/CharacterCard';
 
 function App() {
   const [characters, setCharacters] = useState([]);
-
+  const [search, setSearch] = useState("");
   useEffect(() => {
     const loadData = async () => {
       try {
