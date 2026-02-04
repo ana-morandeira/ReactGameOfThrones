@@ -27,26 +27,32 @@ const HousesPage = () => {
   if (loading) return <div className="text-center p-10 text-white">Loading Great Houses...</div>;
 
   return (
-    <div className="min-h-screen bg-slate-100 p-8">
-      <header className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-2">Great Houses of Westeros</h1>
-        <p className="text-slate-600 italic">"The man who passes the sentence should swing the sword."</p>
-      </header>
+    // src/pages/HousesPage.jsx (Fragmento del return)
+<div className="min-h-screen bg-got-dark p-8 font-got">
+  <header className="text-center mb-16">
+    <h1 className="text-5xl font-extrabold text-got-gold mb-4 tracking-tighter">
+      Great Houses
+    </h1>
+    <div className="h-1 w-24 bg-got-gold mx-auto mb-4 shadow-[0_0_10px_#c5a059]"></div>
+  </header>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {houses.map((house, index) => (
-          <div 
-            key={index} 
-            className="bg-white p-6 rounded-lg border-l-8 border-blue-600 shadow-sm hover:shadow-md transition-shadow flex items-center justify-between"
-          >
-            <span className="text-xl font-bold text-slate-800">{house}</span>
-            <div className="h-8 w-8 bg-slate-200 rounded-full flex items-center justify-center">
-               <span className="text-xs text-slate-500 font-mono">ID</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+  <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {houses.map((house, index) => (
+      <Link 
+        to={`/houses/${house}`} 
+        key={index} 
+        className="bg-got-iron/30 border border-got-gold/20 p-6 rounded-sm hover:border-got-gold hover:bg-got-iron/50 transition-all group flex items-center justify-between shadow-lg"
+      >
+        <span className="text-xl font-bold text-gray-200 group-hover:text-got-gold transition-colors tracking-widest">
+          {house}
+        </span>
+        <span className="text-got-gold opacity-0 group-hover:opacity-100 transition-opacity">
+          ⚔️
+        </span>
+      </Link>
+    ))}
+  </div>
+</div>
   );
 };
 
