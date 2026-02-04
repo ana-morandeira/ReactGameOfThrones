@@ -18,7 +18,7 @@ const HousesPage = () => {
       } catch (error) {
         console.error("Error loading houses", error);
       } finally {
-        setLoading(setLoading(false));
+        setLoading(false);
       }
     };
     fetchHouses();

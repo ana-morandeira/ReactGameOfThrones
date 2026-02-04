@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getAllCharacters } from './services/characterService';
-import CharacterCard from './components/CharacterCard';
+import { getAllCharacters } from '../services/characterService';
+import CharacterCard from '../components/CharacterCard';
 
 function App() {
   const [characters, setCharacters] = useState([]);
