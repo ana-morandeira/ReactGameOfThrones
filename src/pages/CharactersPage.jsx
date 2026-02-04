@@ -2,51 +2,42 @@ import { useEffect, useState } from 'react';
 import { getAllCharacters } from '../services/characterService';
 import CharacterCard from '../components/CharacterCard';
 
-function App() {
+const CharactersPage = () => {
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState("");
+
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        const data = await getAllCharacters();
-        setCharacters(data);
-      } catch (error) {
-        console.error("Error loading characters");
-      }
-    };
-    loadData();
+    getAllCharacters().then(setCharacters);
   }, []);
 
-  // Lógica de filtrado
-  const filteredCharacters = characters.filter((char) =>
+  const filtered = characters.filter(char => 
     char.fullName.toLowerCase().includes(search.toLowerCase())
   );
 
- return (
-  <div className="min-h-screen bg-gray-100 p-8">
-    <h1 className="text-3xl font-bold text-center mb-10 text-slate-800">
-      Game of Thrones API
-    </h1>
+  return (
+    <div className="min-h-screen bg-got-dark py-12 px-4">
+      <div className="max-w-6xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-5xl font-got text-got-gold mb-8 tracking-widest uppercase">
+            Game of Thrones API
+          </h1>
+          
+          <input 
+            type="text"
+            placeholder="Search character..."
+            className="w-full max-w-md px-6 py-3 bg-got-iron/20 border border-got-gold/30 rounded-full text-gray-200 focus:outline-none focus:border-got-gold focus:ring-1 focus:ring-got-gold transition-all"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </header>
 
-    {/* Buscador */}
-      <div className="max-w-md mx-auto mb-10">
-        <input
-          type="text"
-          placeholder="Search character..."
-          className="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {filtered.map(char => (
+            <CharacterCard key={char.id} character={char} />
+          ))}
+        </div>
       </div>
-    
-    {/* Este es el contenedor que hace la magia del grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-      {characters.map((char) => (
-        <CharacterCard key={char.id} character={char} />
-      ))}
     </div>
-  </div>
-);
-}
+  );
+};
 
-export default App;
+export default CharactersPage;
