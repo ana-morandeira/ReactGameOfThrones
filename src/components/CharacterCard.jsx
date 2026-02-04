@@ -1,24 +1,19 @@
 const CharacterCard = ({ character }) => {
   return (
-    <div className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-      <div className="relative">
-        <img 
-          className="w-full h-72 object-cover" 
-          src={character.imageUrl} 
-          alt={character.fullName} 
-        />
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-4">
-          <p className="text-blue-400 text-xs font-bold uppercase tracking-widest">
-            {character.family}
-          </p>
-        </div>
-      </div>
-      
-      <div className="p-5">
-        <h5 className="text-xl font-bold text-white mb-1">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col border border-gray-200">
+      <img 
+        src={character.imageUrl} 
+        alt={character.fullName} 
+        className="w-full h-64 object-cover"
+      />
+      <div className="p-4 flex flex-col gap-1">
+        <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">
+         {character.family?.trim() ? character.family : "Unknown House"}
+        </span>
+        <h2 className="text-xl font-semibold text-gray-800">
           {character.fullName}
-        </h5>
-        <p className="text-slate-400 text-sm italic">
+        </h2>
+        <p className="text-sm italic text-gray-500">
           "{character.title}"
         </p>
       </div>

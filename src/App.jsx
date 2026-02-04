@@ -17,19 +17,20 @@ function App() {
     loadData();
   }, []);
 
-  return (
-    <div className="min-h-screen bg-slate-900 py-10 px-4">
-      <h1 className="text-4xl md:text-6xl font-extrabold text-center text-white mb-12 tracking-tighter">
-        Game of Thrones <span className="text-blue-500">API</span>
-      </h1>
-
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {characters.map((char) => (
-          <CharacterCard key={char.id} character={char} />
-        ))}
-      </div>
+ return (
+  <div className="min-h-screen bg-gray-100 p-8">
+    <h1 className="text-3xl font-bold text-center mb-10 text-slate-800">
+      Game of Thrones API
+    </h1>
+    
+    {/* Este es el contenedor que hace la magia del grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      {characters.map((char) => (
+        <CharacterCard key={char.id} character={char} />
+      ))}
     </div>
-  );
-}
+  </div>
+);
+}git
 
 export default App;
