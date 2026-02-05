@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharactersPage from './pages/CharactersPage';
 import HousesPage from './pages/HousesPage';
 import ContinentsPage from './pages/ContinentsPage';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path="/continents" element={<ContinentsPage />} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
   );
