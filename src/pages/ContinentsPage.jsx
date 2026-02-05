@@ -55,24 +55,48 @@ const ContinentsPage = () => {
             </div>
 
             {/* Panel de Información de la API (Solo si está seleccionado) */}
-            {selectedContinent?.id === continent.id && (
-              <div className="p-6 bg-black/40 border-t-4 border-got-gold rounded-b-2xl animate-in fade-in slide-in-from-top-4 duration-500">
-                <h3 className="text-got-gold uppercase tracking-widest text-sm font-bold mb-4">API Metadata:</h3>
-                <div className="grid grid-cols-2 gap-4 text-left border border-got-gold/20 p-4 rounded-lg bg-got-iron/10">
-                  <div>
-                    <p className="text-[10px] text-gray-500 uppercase">Field: ID</p>
-                    <p className="text-xl text-white"># {selectedContinent.id}</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] text-gray-500 uppercase">Field: Name</p>
-                    <p className="text-xl text-white">{selectedContinent.name}</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs text-gray-400 italic">
-                  "This land is officially recognized by the Citadel as {selectedContinent.name}."
-                </p>
-              </div>
-            )}
+           {selectedContinent?.id === continent.id && (
+  <div className="p-8 bg-got-iron/40 border-t-2 border-got-gold rounded-b-2xl animate-in fade-in zoom-in duration-500 shadow-inner">
+    {/* Título Estilo Pergamino */}
+    <div className="flex justify-between items-center border-b border-got-gold/30 pb-4 mb-6">
+      <h3 className="text-got-gold font-got text-xl tracking-[0.2em] uppercase">
+        {CONTINENT_LORE[continent.name]?.alias || "Territorio sin Explorar"}
+      </h3>
+      <span className="text-got-gold/40 font-mono text-xs uppercase tracking-widest">
+        Códice #{continent.id}
+      </span>
+    </div>
+
+    {/* Descripción de Lore */}
+    <p className="text-gray-300 italic text-lg leading-relaxed mb-6 font-serif px-4 border-l-2 border-got-gold/20">
+      "{CONTINENT_LORE[continent.name]?.description || "La información sobre estas tierras es escasa en nuestras bibliotecas."}"
+    </p>
+
+    {/* Datos de Interés */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-black/30 p-4 rounded-lg border border-got-gold/10">
+      <div>
+        <h4 className="text-[10px] text-got-gold uppercase tracking-[0.3em] mb-2">Bastiones Clave</h4>
+        <p className="text-white text-sm font-semibold tracking-wide">
+          {CONTINENT_LORE[continent.name]?.notablePlaces || "Información Restringida"}
+        </p>
+      </div>
+      <div className="text-right">
+        <h4 className="text-[10px] text-got-gold uppercase tracking-[0.3em] mb-2">Estado</h4>
+        <p className="text-green-500/80 text-sm font-bold animate-pulse">
+          ABIERTO PARA EXPLORACIÓN
+        </p>
+      </div>
+    </div>
+
+    {/* Frase Final */}
+    <div className="mt-8 text-center">
+       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-got-gold/30 to-transparent mb-4"></div>
+       <p className="text-[9px] text-got-gold/40 uppercase tracking-[0.5em]">
+         Documentado por la Orden de los Maestres
+       </p>
+    </div>
+  </div>
+)}
           </div>
         ))}
       </div>
@@ -81,3 +105,26 @@ const ContinentsPage = () => {
 };
 
 export default ContinentsPage;
+
+const CONTINENT_LORE = {
+  "Westeros": {
+    alias: "Los Siete Reinos",
+    description: "Hogar del Trono de Hierro. Desde el imponente Muro en el norte hasta los desiertos de Dorne en el sur.",
+    notablePlaces: "Desembarco del Rey, Invernalia, Rocadragón",
+  },
+  "Essos": {
+    alias: "El Continente Oriental",
+    description: "Una vasta tierra de magia, ciudades libres y el Mar de Hierba. Cuna de las antiguas ruinas de Valyria.",
+    notablePlaces: "Braavos, Meereen, Volantis",
+  },
+  "Sothoryos": {
+    alias: "El Infierno Verde",
+    description: "Una tierra misteriosa y plagada de enfermedades, cubierta por selvas densas y criaturas extrañas.",
+    notablePlaces: "Zamettar, Yeen",
+  },
+  "Ulthos": {
+    alias: "Las Tierras de la Sombra",
+    description: "Un territorio oscuro y boscoso al sur de Asshai. Poco se sabe de él incluso para los Archimaestres.",
+    notablePlaces: "Territorios Desconocidos",
+  }
+};
