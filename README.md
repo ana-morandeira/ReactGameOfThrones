@@ -1,16 +1,42 @@
-# React + Vite
+# ⚔️ Game of Thrones - Archivos de la Ciudadela
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+Bienvenido a la enciclopedia digital de Poniente. Esta aplicación, construida con React y Tailwind CSS, permite explorar los personajes, las grandes casas y los continentes del universo de George R.R. Martin, consumiendo datos de la API oficial de *ThronesAPI*.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📜 Características
 
-## React Compiler
+- **Explorador de Personajes**: Listado detallado de los protagonistas y secundarios de la saga.
+- **Grandes Casas**: Información sobre los linajes y estandartes.
+- **Geografía de Poniente**: Descubre los continentes conocidos.
+- **Interfaz Cinematográfica**: Diseño oscuro con acentos dorados inspirado en la estética de la serie.
+- **Diseño Responsivo**: Optimizado para dispositivos móviles y escritorio.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🛠️ Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- **React 18**: Biblioteca principal para la interfaz de usuario.
+- **Tailwind CSS**: Framework de estilos para un diseño "utility-first" y animaciones doradas.
+- **React Router Dom**: Gestión de navegación entre las crónicas.
+- **Axios**: Cliente HTTP para la recuperación de datos de la Ciudadela (API).
+- **Vite**: Herramienta de construcción ultra rápida.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Instalación y Uso
+
+Si deseas clonar estos archivos en tu maestre local, sigue estos pasos:
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/ReactGameOfThrones.git](https://github.com/tu-usuario/ReactGameOfThrones.git)
+
+2. Instala las dependencias:
+      npm install
+   
+ 3.Inicia el servidor de desarrollo:
+       npm run dev
+
+🌍 Despliegue
+Este proyecto está configurado para ser desplegado en Vercel. Asegúrate de incluir el archivo vercel.json para el correcto funcionamiento de las rutas.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+“El conocimiento es una de las pocas cosas que el invierno no puede llevarse.” ❄️ 
