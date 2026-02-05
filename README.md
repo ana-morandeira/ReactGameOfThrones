@@ -13,6 +13,8 @@ Bienvenido a la enciclopedia digital de Poniente. Esta aplicación, construida c
 - **Geografía de Poniente**: Descubre los continentes conocidos.
 - **Interfaz Cinematográfica**: Diseño oscuro con acentos dorados inspirado en la estética de la serie.
 - **Diseño Responsivo**: Optimizado para dispositivos móviles y escritorio.
+<img width="400" height="295" alt="imagen interfaz" src="https://github.com/user-attachments/assets/556b824a-9fee-4a9d-a0e0-024ae1277b8d" />
+
 
 ## 🛠️ Tecnologías Utilizadas
 
