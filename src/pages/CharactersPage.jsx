@@ -30,11 +30,12 @@ const CharactersPage = () => {
           />
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {filtered.map(char => (
-            <CharacterCard key={char.id} character={char} />
-          ))}
-        </div>
+      {/* Cambia el contenedor de tus cartas por esto */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+  {characters.map(character => (
+    <CharacterCard key={character.id} character={character} />
+  ))}
+</div>
       </div>
     </div>
   );
