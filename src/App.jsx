@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharactersPage from './pages/CharactersPage';
 import HousesPage from './pages/HousesPage';
-
+import ContinentsPage from './pages/ContinentsPage';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import './App.css';
 
 
 function App() {
