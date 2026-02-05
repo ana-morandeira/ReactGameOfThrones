@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharactersPage from './pages/CharactersPage';
 import HousesPage from './pages/HousesPage';
 
+
+
 function App() {
   return (
     <Router>
