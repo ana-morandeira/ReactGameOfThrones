@@ -19,12 +19,12 @@ const CharactersPage = () => {
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-got text-got-gold mb-8 tracking-widest uppercase">
-            Game of Thrones API
+            Juego de Tronos
           </h1>
           
           <input 
             type="text"
-            placeholder="Search character..."
+            placeholder="Busca tu personaje"
             className="w-full max-w-md px-6 py-3 bg-got-iron/20 border border-got-gold/30 rounded-full text-gray-200 focus:outline-none focus:border-got-gold focus:ring-1 focus:ring-got-gold transition-all"
             onChange={(e) => setSearch(e.target.value)}
           />

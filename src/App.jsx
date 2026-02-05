@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharactersPage from './pages/CharactersPage';
 import HousesPage from './pages/HousesPage';
-
+import ContinentsPage from './pages/ContinentsPage';
 
 function App() {
   return (
@@ -15,12 +15,16 @@ function App() {
           <Link to="/houses" className="text-got-gold hover:text-white transition-all uppercase tracking-[0.2em] text-sm font-bold">
             Casas
           </Link>
+          <Link to="/continents" className="text-got-gold hover:text-white transition-all uppercase tracking-[0.2em] text-sm font-bold">
+  Continents
+</Link>
         </nav>
 
         <main className="p-4">
           <Routes>
             <Route path="/" element={<CharactersPage />} />
             <Route path="/houses" element={<HousesPage />} />
+            <Route path="/continents" element={<ContinentsPage />} />
           </Routes>
         </main>
       </div>
