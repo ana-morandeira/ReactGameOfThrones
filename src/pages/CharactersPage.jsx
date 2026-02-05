@@ -18,9 +18,7 @@ const CharactersPage = () => {
     <div className="min-h-screen bg-got-dark py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-got text-got-gold mb-8 tracking-widest uppercase">
-            Juego de Tronos
-          </h1>
+          
           
           <input 
             type="text"

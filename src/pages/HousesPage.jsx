@@ -42,9 +42,7 @@ const HousesPage = () => {
   return (
     <div className="min-h-screen bg-got-dark p-4 md:p-8 font-got">
       <header className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold text-got-gold mb-4 tracking-tighter uppercase">
-          Great Houses
-        </h1>
+       
         <div className="h-1 w-24 bg-got-gold mx-auto shadow-[0_0_15px_#c5a059]"></div>
       </header>
 
