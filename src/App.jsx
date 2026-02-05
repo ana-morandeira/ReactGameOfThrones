@@ -2,12 +2,18 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharactersPage from './pages/CharactersPage';
 import HousesPage from './pages/HousesPage';
 import ContinentsPage from './pages/ContinentsPage';
+import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import './App.css';
+
 
 function App() {
   return (
+   
+
     <Router>
       <div className="min-h-screen flex flex-col bg-got-dark text-gray-200 font-got">
+        <Header />
         <nav className="bg-black border-b border-got-gold/30 p-6 flex gap-8 justify-center items-center shadow-2xl w-full px-4 md:px-8 py-4">
           <Link to="/" className="text-got-gold hover:text-white transition-all uppercase tracking-[0.2em] text-sm font-bold">
             Personajes
