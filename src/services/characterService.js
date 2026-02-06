@@ -23,3 +23,9 @@ export const getCharacterById = async (id) => {
     throw error;
   }
 };
+
+export const getAllContinents = async () => {
+  const response = await fetch("https://thronesapi.com/api/v2/Continents");
+  if (!response.ok) throw new Error("Failed to fetch continents");
+  return await response.json();
+};
