@@ -24,21 +24,31 @@ Bienvenido a la enciclopedia digital de Poniente. Esta aplicación, construida c
 - **Axios**: Cliente HTTP para la recuperación de datos de la Ciudadela (API).
 - **Vite**: Herramienta de construcción ultra rápida.
 
-## 🚀 Instalación y Uso
-
+🚀 Instalación y Uso
 Si deseas clonar estos archivos en tu maestre local, sigue estos pasos:
 
-1. **Clona el repositorio:**
-   ```bash
-   git clone [https://github.com/tu-usuario/ReactGameOfThrones.git](https://github.com/tu-usuario/ReactGameOfThrones.git)
+Clona el repositorio:
 
-2. Instala las dependencias:
-      npm install
-   
- 3.Inicia el servidor de desarrollo:
-       npm run dev
+Bash
+git clone https://github.com/ana-morandeira/ReactGameOfThrones.git
+Instala las dependencias:
 
-🌍 Despliegue
-Este proyecto está configurado para ser desplegado en Vercel. Asegúrate de incluir el archivo vercel.json para el correcto funcionamiento de las rutas.
+Bash
+npm install
+Inicia el servidor de desarrollo:
+
+Bash
+npm run dev
+
+Aquí tienes el bloque de Despliegue optimizado para que el diseño sea limpio, los espacios sean los correctos y el enlace funcione directamente:
+
+Markdown
+---
+
+### 🌍 Despliegue
+
+Este proyecto se encuentra desplegado y disponible para su consulta en la Ciudadela digital. Puedes acceder a la versión en vivo a través del siguiente enlace:
+
+🔗 **[react-game-of-thrones-one.vercel.app](https://react-game-of-thrones-one.vercel.app)**
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 “El conocimiento es una de las pocas cosas que el invierno no puede llevarse.” ❄️ 
